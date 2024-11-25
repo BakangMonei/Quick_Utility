@@ -1,0 +1,223 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#F5F5F5"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="16dp"
+    tools:context=".Fragments.CalculatorFragment">
+
+    <!-- Calculation History Display -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:background="#FFFFFF"
+        android:elevation="4dp"
+        android:padding="8dp">
+
+        <TextView
+            android:id="@+id/calculationHistory"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textColor="#333333"
+            android:textSize="16sp" />
+    </ScrollView>
+
+    <!-- Main Display -->
+    <EditText
+        android:id="@+id/display"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:focusable="false"
+        android:gravity="end"
+        android:inputType="none"
+        android:padding="12dp"
+        android:textColor="#000000"
+        android:textSize="28sp"
+        android:textStyle="bold" />
+
+    <!-- Mode Toggle -->
+    <ToggleButton
+        android:id="@+id/btnToggleMode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:textOff="Switch to Scientific"
+        android:textOn="Switch to Simple"
+        android:textSize="16sp" />
+
+    <!-- Simple Calculator Buttons -->
+    <GridLayout
+        android:id="@+id/simplePanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:columnCount="4"
+        android:rowCount="5">
+
+        <Button
+            android:id="@+id/btn7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="7" />
+
+        <Button
+            android:id="@+id/btn8"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="8" />
+
+        <Button
+            android:id="@+id/btn9"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="9" />
+
+        <Button
+            android:id="@+id/btnDivide"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="/" />
+
+        <Button
+            android:id="@+id/btn4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="4" />
+
+        <Button
+            android:id="@+id/btn5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="5" />
+
+        <Button
+            android:id="@+id/btn6"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="6" />
+
+        <Button
+            android:id="@+id/btnMultiply"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*" />
+
+        <Button
+            android:id="@+id/btn1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="2" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3" />
+
+        <Button
+            android:id="@+id/btnSubtract"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="-" />
+
+        <Button
+            android:id="@+id/btn0"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0" />
+
+        <Button
+            android:id="@+id/btnDot"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="." />
+
+        <Button
+            android:id="@+id/btnClear"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="C" />
+
+        <Button
+            android:id="@+id/btnAdd"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+" />
+
+        <Button
+            android:id="@+id/btnEquals"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_columnSpan="4"
+            android:text="=" />
+    </GridLayout>
+
+    <!-- Scientific Calculator Buttons -->
+    <GridLayout
+        android:id="@+id/scientificPanel"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:columnCount="4"
+        android:rowCount="3"
+        android:visibility="gone">
+
+        <Button
+            android:id="@+id/btnSin"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sin" />
+
+        <Button
+            android:id="@+id/btnCos"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="cos" />
+
+        <Button
+            android:id="@+id/btnTan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="tan" />
+
+        <Button
+            android:id="@+id/btnLog"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="log" />
+
+        <Button
+            android:id="@+id/btnSqrt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="√" />
+
+        <Button
+            android:id="@+id/btnPower"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="x²" />
+
+        <Button
+            android:id="@+id/btnPi"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="π" />
+
+        <Button
+            android:id="@+id/btnFactorial"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="x!" />
+    </GridLayout>
+</LinearLayout>
